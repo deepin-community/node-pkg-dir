@@ -1,0 +1,48 @@
+Description: replace ava by tape in test
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2019-12-28
+
+--- a/test.js
++++ b/test.js
+@@ -1,10 +1,11 @@
+-import fs from 'fs';
+-import path from 'path';
+-import test from 'ava';
+-import tempy from 'tempy';
+-import pkgDir from '.';
++const fs = require('fs');
++const path = require('path');
++const test = require('tape');
++const tempy = require('tempy');
++const pkgDir = require('.');
+ 
+-// Create a disjoint directory, used for the not-found tests
++ /*
++ Create a disjoint directory, used for the not-found tests
+ test.beforeEach(t => {
+ 	t.context.disjoint = tempy.directory();
+ });
+@@ -12,13 +13,20 @@
+ test.afterEach(t => {
+ 	fs.rmdirSync(t.context.disjoint);
+ });
++*/
+ 
+ test('async', async t => {
++	var td = tempy.directory();
+ 	t.is(await pkgDir(path.join(__dirname, 'fixture')), __dirname);
+-	t.is(await pkgDir(t.context.disjoint), undefined);
++	t.is(await pkgDir(td), undefined);
++	fs.rmdirSync(td);
++	t.end();
+ });
+ 
+ test('sync', t => {
++	var td = tempy.directory();
+ 	t.is(pkgDir.sync(path.join(__dirname, 'fixture')), __dirname);
+-	t.is(pkgDir.sync(t.context.disjoint), undefined);
++	t.is(pkgDir.sync(td), undefined);
++	fs.rmdirSync(td);
++	t.end();
+ });

@@ -1,0 +1,57 @@
+node-pkg-dir (5.0.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Pirate Praveen ]
+  * Update minimum version of node-find-up to 4.0
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs
+  * Remove dependency to nodejs
+  * New upstream version 5.0.0
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 26 Dec 2020 09:27:46 +0100
+
+node-pkg-dir (4.2.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 29 Dec 2019 05:30:43 +0100
+
+node-pkg-dir (4.2.0-1) experimental; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Update VCS fields to salsa
+  * New upstream version 4.2.0
+  * Use pkg-js-tools auto install
+  * Update copyright
+  * Replace ava by tape in test
+  * Embed temp-dir and tempy for test only
+  * Enable upstream test using pkg-js-tools
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 28 Dec 2019 13:59:05 +0100
+
+node-pkg-dir (2.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 08 Feb 2018 19:33:53 +0530
+
+node-pkg-dir (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #845087)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 20 Nov 2016 15:42:31 +0530
