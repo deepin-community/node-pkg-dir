@@ -1,3 +1,13 @@
+node-pkg-dir (5.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * Fix debian/watch
+    * Fix filenamemangle
+    * Fix GitHub tags regex
+
+ -- Yadd <yadd@debian.org>  Mon, 21 Nov 2022 14:14:15 +0100
+
 node-pkg-dir (5.0.0-1) unstable; urgency=medium
 
   * Team upload
