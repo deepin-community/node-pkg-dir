@@ -10,7 +10,7 @@ Build-Depends:
  , node-tape <!nocheck>
  , node-unique-string <!nocheck>
  , dh-sequence-nodejs
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-pkg-dir
 Vcs-Git: https://salsa.debian.org/js-team/node-pkg-dir.git
 Homepage: https://github.com/sindresorhus/pkg-dir
